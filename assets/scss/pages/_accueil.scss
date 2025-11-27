@@ -1,0 +1,224 @@
+@use "../layout/header";
+@use "../layout/footer";
+@use "../components/buttons";
+@use "../abstracts/variables";
+
+
+//HERO
+h1 {
+    font-size: 40px;
+    color: variables.$light;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 24px;
+    color: variables.$light;
+}
+
+.hero-accueil > div > p {
+    color: variables.$light;
+    font-size: 18px;
+}
+
+
+.container-main {
+    padding:0 25rem;
+}
+
+.hero-accueil {
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    padding-top: 15%;
+}
+
+.square-red {
+    position: absolute;
+    z-index: -1;
+    background-color: variables.$primary;
+    width: 80%;
+    height: 592px;
+}
+
+.hero-img-accueil {
+    width: 45%;
+    height: 364px;
+    position: absolute;
+    right: 0;
+    top: 356px;
+}
+
+.hero-img-accueil > img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.hero-img-accueil-inside {
+    display: none;
+}
+
+
+//PROFIL
+
+.profil {
+    margin: 20rem 0 10rem 0;
+    font-size: 15px;
+    line-height: 28px;
+    display: flex;
+    gap: 2%;
+    position: relative;
+}
+
+.square-grey {
+    position: absolute;
+    z-index: -1;
+    height: 300px;
+    width: 400px;
+    background-color: variables.$scondary;
+
+}
+
+.square-g1 {
+    left: -7rem;
+    top: -7rem;
+}
+
+.square-g2 {
+    right: -7rem;
+    bottom: -7rem;
+}
+
+.profil-description {
+    width: 49%;
+    z-index: 2;
+}
+
+h3 {
+    color: variables.$primary;
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.profil-img {
+    width: 49%;
+    min-height: 100px;
+    max-height: 500px;
+}
+
+.profil-img > img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+//HERO RESPONSIVE
+@media screen and (max-width: 1536px) {
+    .container-main {
+        padding: 0 10rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container-main {
+        padding: 0 5rem;
+    }
+
+    .square-g2 {
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    //HERO
+    .square-red {
+        display: none;
+    }
+    .hero-accueil {
+        background-color: variables.$primary;
+        width: 100%;
+        padding: 5rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    .container-main {
+        padding: 0;
+    }
+    .hero-img-accueil {
+        display: none;
+    }
+    .hero-img-accueil-inside {
+        display: flex;
+        width: 40%;
+        height: 370px;
+    }
+    .hero-img-accueil-inside > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;      
+        object-position: center;
+        display: block; 
+    }
+
+    .hero-description {
+        width: 40%;
+    }
+
+    //PROFIL
+    .square-grey {
+        display: none;
+    }
+
+    .profil {
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 5rem;
+        gap: 5rem;
+    }
+
+    .profil-description {
+        width: 100%;
+        text-align: center;
+    }
+
+    .profil-img {
+        width: 100%;
+        height: 300px;
+    }
+
+    .profil-img > img {
+        max-width: 100%;
+
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .hero-accueil {
+        flex-direction: column-reverse;
+        padding: 0;
+    }
+
+    .hero-img-accueil-inside {
+        width: 100%;
+    }
+
+    .hero-description {
+        width: auto;
+        padding: 4rem 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    h2 {
+        margin: 0;
+    }
+
+}

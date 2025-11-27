@@ -1,0 +1,67 @@
+@use "../abstracts/variables";
+
+footer {
+    background-color: variables.$dark;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+footer > div > ul > li >  a {
+    font-size: 24px;
+}
+
+.container-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25rem;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.links-footer {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+@media screen and (max-width: 1536px) {
+    .container-footer {
+        padding: 0 10rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container-footer {
+        padding: 0 5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 0;
+    }
+
+    .socials {
+        flex-direction: row;
+    }
+
+    .links-footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+}

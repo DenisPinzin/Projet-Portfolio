@@ -1,0 +1,23 @@
+const menu = document.querySelector('.menu')
+const nav = document.querySelector('nav')
+let count = 0
+
+menu.addEventListener('click', function (menu){
+    if (count == 0) {
+        nav.classList.add('nav-menu')
+        count = 1
+        return
+    } else if (count == 1) {
+        nav.classList.remove('nav-menu')
+        count = 0
+        return
+    }
+})
+
+// window.addEventListener('click', function () {
+//     if (count == 1) {
+//         nav.style.display='none'
+//         count = 0
+//         return
+//     }
+// })

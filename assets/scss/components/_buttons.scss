@@ -1,0 +1,14 @@
+@use "../abstracts/variables";
+@use "../abstracts/mixins";
+
+//BTN
+
+.btn {
+    @include mixins.button(variables.$primary, variables.$light);
+    font-size: 20px;
+    letter-spacing: 0.8px;
+}
+
+.btn:hover {
+        @include mixins.button(variables.$light, variables.$primary);
+}

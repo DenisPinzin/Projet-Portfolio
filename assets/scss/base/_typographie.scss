@@ -1,0 +1,53 @@
+//BARLOW CONDENSED
+@font-face {
+    font-family: "BarlowCondensed-Bold";
+    src: url("../fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf");
+}
+
+@font-face {
+    font-family: "BarlowCondensed-SemiBold";
+    src: url("../fonts/Barlow_Condensed/BarlowCondensed-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "BarlowCondensed-Regular";
+    src: url("../fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf");
+}
+
+//POPPINS
+
+@font-face {
+    font-family: "Poppins-Bold";
+    src: url("../fonts/Poppins/Poppins-Bold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-SemiBold";
+    src: url("../fonts/Poppins/Poppins-SemiBold.ttf");
+}
+
+@font-face {
+    font-family: "Poppins-Regular";
+    src: url("../fonts/Poppins/Poppins-Regular.ttf");
+}
+
+
+nav a, .logo, .container-languages  p   {
+    font-family: "BarlowCondensed-Regular";
+}
+
+h1, h3, .btn {
+    font-family: "BarlowCondensed-Bold";
+}
+
+h2 {
+    font-family: "Poppins-SemiBold";
+}
+
+p, .contacts a {
+    font-family: "Poppins-Regular";
+}
+
+footer {
+    font-family: "BarlowCondensed-Regular";
+}

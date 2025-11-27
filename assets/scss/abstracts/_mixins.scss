@@ -1,0 +1,15 @@
+@use "../abstracts/variables";
+
+//BTN
+
+@mixin button($bg-color, $text-color) {
+  width: 141px;
+  height: 42px;
+  color: $text-color;
+  border: 2px solid variables.$light;
+  background-color: $bg-color;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

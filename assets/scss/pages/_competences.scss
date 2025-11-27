@@ -1,0 +1,208 @@
+@use "../abstracts/variables";
+
+
+.main-competences {
+    position: relative;
+}
+
+.container-competences {
+    padding: 8% 5rem 5rem 25rem;
+}
+
+.redSquare-competences {
+    position: absolute;
+    z-index: -1;
+    width: 77%;
+    height: 600px;
+    background-color: variables.$primary;
+    top: 0;
+}
+
+.hero-competence {
+    width: 50%;
+    line-height: 30px;
+}
+
+.hero-competence > p {
+    font-size: 18px;
+    color: variables.$light;
+}
+
+.hero-img-competences-desktop {
+    position: absolute;
+    width: 25%;
+    height: 480px;
+    right: 10%;
+    top: 18%;
+}
+
+.hero-img-competences-desktop > img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+.redSquare-competences-right {
+    position: absolute;
+    background-color: variables.$primary;
+    width: 5%;
+    height: 20%;
+    right: 0;
+    top: 45%;
+}
+
+.hero-img-competences-mobile {
+    display: none;
+}
+
+.hero-competence > h1 {
+   
+}
+
+
+//LANGUAGES
+.container-languages {
+    padding: 15rem 25rem 5rem 25rem;
+}
+
+.container-languages  p {
+    font-size: 24px;
+}
+
+.langage-grid {
+  display: grid;                        
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 12px;                              
+  place-items: center;                   
+}
+
+.langage-grid svg {
+  transition: transform 0.4s ease-in-out;
+}
+
+.langage-grid svg:hover {
+  transform: scale(1.2);
+}
+
+
+@media screen and (max-width: 1536px) {
+    .hero-competence {
+        width: 60%;
+
+    }
+
+    .container-competences {
+        padding: 11% 10rem 5rem 10rem;
+    }
+
+    .container-languages {
+        padding: 15rem 10rem 10rem 10rem;
+    }
+
+    .main-competences {
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+
+    //HERO COMPETENCES
+    .hero-img-competences-desktop, 
+    .redSquare-competences,
+    .redSquare-competences-right
+     {
+        display: none;
+
+    }
+
+    .container-competences {
+        display: flex;
+        padding: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .container-main-competences {
+        padding: 5rem;
+        background-color: variables.$primary;
+    }
+
+    .hero-competence {
+        width: 48%;
+    }
+     
+    .hero-img-competences-mobile {
+        display: flex;
+        width: 48%;
+        height: 100%;
+    }
+
+    .hero-img-competences-mobile > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    //LANGUAGES
+    .container-languages {
+        padding: 5rem;
+    }
+        
+}
+
+@media screen and (max-width: 992px) {
+    .hero-img-competences-mobile {
+        height: 464px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-competences {
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .container-main-competences {
+        padding: 0;
+    }
+
+    .hero-img-competences-mobile {
+        width: 100%;
+        height: 370px;
+    }
+
+    .hero-competence {
+        padding: 4rem;
+        width: auto;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .main-competences {
+        height: auto;
+    }
+
+    .langage-grid {                      
+        grid-template-columns: repeat(3, minmax(0, 1fr));               
+    }
+}
+
+@media screen and (max-width: 576px) {
+     .hero-competence {
+        padding: 4rem 10px;
+     }
+
+    .langage-grid {                      
+        grid-template-columns: repeat(2, minmax(0, 1fr));               
+    }
+
+    .container-languages {
+        padding: 5rem 10px;
+        text-align: center;
+    }
+}
