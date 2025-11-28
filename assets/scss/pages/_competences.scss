@@ -1,4 +1,5 @@
 @use "../abstracts/variables";
+@use "../base/responsive";
 
 
 .main-competences {
@@ -55,11 +56,6 @@
 .hero-img-competences-mobile {
     display: none;
 }
-
-.hero-competence > h1 {
-   
-}
-
 
 //LANGUAGES
 .container-languages {

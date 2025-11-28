@@ -9,6 +9,14 @@
     letter-spacing: 0.8px;
 }
 
-.btn:hover {
+.btn:hover,
+.btn-projet:hover {
         @include mixins.button(variables.$light, variables.$primary);
+}
+
+.btn-projet {
+    @include mixins.button(variables.$primary, variables.$light);
+    font-size: 20px;
+    letter-spacing: 0.8px;
+    border-radius: 20px;
 }
