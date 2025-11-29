@@ -1,0 +1,55 @@
+@use "../components/buttons";
+@use "../abstracts/variables";
+
+@media screen and (max-width: 1536px) {
+    .container-projets {
+        padding: 3rem 5rem;
+        margin: 3rem 5rem;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container-projets {
+        padding: 1rem 3rem;
+        margin: 3rem 2rem;
+    }
+
+    .carousel {
+        width: 40rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .carousel {
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container-cards {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+    }  
+
+    .container-carousel {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 576px)  {
+    .card {
+        width: 75%;
+        border: 2px solid variables.$light;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .container-projets {
+        padding: 3rem 1rem 4rem 1rem;
+        margin: 1rem;
+    }
+}

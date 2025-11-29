@@ -1,6 +1,16 @@
-@use "reset/reset-default";
+@use "base/reset-default";
+
+// PAGES
 
 @use "pages/accueil";
 @use "pages/competences";
 @use "pages/contact";
 @use "pages/projets";
+
+//RESPONSIVES PAGES
+
+@use "responsives/accueil-responsive";
+@use "responsives/competences-responsive";
+@use "responsives/contact-responsive";
+@use "responsives/projets-responsive";
+

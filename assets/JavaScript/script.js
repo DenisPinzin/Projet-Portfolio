@@ -25,33 +25,42 @@ menu.addEventListener('click', function (menu){
 // })
 
 //CAROUSEL
-// Récupère tous les éléments
 const images = document.querySelectorAll('.carousel img');
 const leftArrow = document.getElementById('left-arrow');
 const rightArrow = document.getElementById('right-arrow');
 
 let currentIndex = 0;
 
-// Fonction pour afficher l'image active
+// FONCTION IMG ACTIVE
 function showImage(index) {
-  images.forEach((img, i) => {
-    img.classList.toggle('active', i === index);
-  });
+  for (let i = 0; i < images.length; i++) {
+    if (i === index) {
+      images[i].classList.add('active');
+    } else {
+      images[i].classList.remove('active');
+    }
+  }
 }
 
 
-// Affiche la première image au départ
+// PREMIERE IMAGE
 showImage(currentIndex);
 
-// Flèche droite → image suivante
-rightArrow.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % images.length; // boucle
+// FLECHE DROITE
+rightArrow.addEventListener('click', function() {
+  currentIndex = currentIndex + 1;
+  if (currentIndex >= images.length) {
+    currentIndex = 0;
+  }
   showImage(currentIndex);
 });
 
-// Flèche gauche → image précédente
-leftArrow.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + images.length) % images.length; // boucle inverse
+// FLECHE GAUCHE
+leftArrow.addEventListener('click', function() {
+  currentIndex = currentIndex - 1;
+  if (currentIndex < 0) {
+    currentIndex = images.length - 1;
+  }
   showImage(currentIndex);
 });
 

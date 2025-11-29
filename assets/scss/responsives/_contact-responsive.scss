@@ -1,0 +1,56 @@
+@use "../components/buttons";
+@use "../abstracts/variables";
+
+@media screen and (max-width: 1536px) {
+    .container-contact {
+        padding: 7rem;
+        margin:0 3rem 12rem 3rem
+    }
+
+    .mail-img {
+        position: absolute;
+        width: 38%;
+        height: 40%;
+        right: 5%;
+        top: 550px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .container-contact {
+        flex-direction: column-reverse;
+        margin: 0;
+        padding: 0;
+    }
+
+    .mail-img {
+        position: inherit;
+        width: 100%;
+        height: 25rem;
+    }
+
+    .contact-description {
+        gap: 3rem;
+        text-align: center;
+        padding: 5rem;
+    }
+
+    .contacts {
+        text-align: start;
+        padding: 3rem 20%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .contacts {
+        text-align: start;
+        padding: 3rem 0;
+    }
+}
+
+
+@media screen and (max-width: 576px) {
+    .contact-description {
+        padding: 3rem 10px 2rem 10px;
+    }
+}
