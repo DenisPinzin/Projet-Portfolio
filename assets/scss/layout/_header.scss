@@ -5,6 +5,7 @@
 header {
     background-color: variables.$dark;
     height: 128px;
+    min-height: 128px;
     display: flex;
     align-items: center;
     position:relative;

@@ -1,8 +1,18 @@
-body {
+@charset "UTF-8";
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+} /* occupe l’espace restant, le footer descend */
 @font-face {
   font-family: "BarlowCondensed-Bold";
   src: url("../fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf");
@@ -56,6 +66,7 @@ footer {
 header {
   background-color: #000000;
   height: 128px;
+  min-height: 128px;
   display: flex;
   align-items: center;
   position: relative;
@@ -402,7 +413,7 @@ h3 {
   width: 25%;
   height: 480px;
   right: 10%;
-  top: 18%;
+  top: 20%;
 }
 
 .hero-img-competences-desktop > img {
@@ -465,9 +476,9 @@ h3 {
 .mail-img {
   position: absolute;
   width: 38%;
-  height: 45%;
+  height: 35%;
   right: 5%;
-  top: 445px;
+  top: 35rem;
 }
 
 .mail-img > img {
@@ -502,6 +513,11 @@ h3 {
 
 .contacts a:hover {
   border-bottom: 1px solid white;
+}
+
+.main-projet {
+  display: flex;
+  align-items: center;
 }
 
 .container-projets {
@@ -790,7 +806,7 @@ h3 {
     width: 38%;
     height: 40%;
     right: 5%;
-    top: 550px;
+    top: 33rem;
   }
 }
 @media screen and (max-width: 1280px) {
@@ -802,7 +818,7 @@ h3 {
   .mail-img {
     position: inherit;
     width: 100%;
-    height: 25rem;
+    height: 100%;
   }
   .contact-description {
     gap: 3rem;

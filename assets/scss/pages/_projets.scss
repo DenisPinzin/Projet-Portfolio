@@ -4,6 +4,11 @@
 @use "../abstracts/variables";
 
 
+.main-projet {
+    display: flex;
+    align-items: center;
+}
+
 .container-projets {
     display: flex;
     flex-direction: column;
